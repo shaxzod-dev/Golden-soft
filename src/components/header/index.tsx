@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { Icons } from "../../assets/icons";
 import HeaderTop from "./header-top";
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown } from "antd";
+import { DropdownItems } from "@/data";
 
 const Header = () => {
+  const items = DropdownItems;
   return (
     <header>
       <HeaderTop />
@@ -14,7 +18,12 @@ const Header = () => {
             </button>
             <nav className="flex items-center gap-x-8">
               <Link to={"/"}>Главная</Link>
-              <Link to={"/catalog"}>Каталог</Link>
+              <Link to={"/catalog"} className="flex items-center gap-x-2">
+                Каталог{" "}
+                <Dropdown menu={{ items }}>
+                  <DownOutlined />
+                </Dropdown>
+              </Link>
               <Link to={"/products"}>Оптовая продажа</Link>
               <Link to={"/about"}>О нас</Link>
             </nav>

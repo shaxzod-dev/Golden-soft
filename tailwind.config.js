@@ -9,6 +9,10 @@ export default {
       colors: {
         primary: "rgb(69,79,91)",
       },
+      backgroundImage: {
+        banner:
+          "url(https://firebasestorage.googleapis.com/v0/b/uploadimage-53655.appspot.com/o/image%2FRectangle%206.png?alt=media&token=eaaa2965-8e0e-41bd-a9bc-b9ac215588ed)",
+      },
     },
   },
   plugins: [],
