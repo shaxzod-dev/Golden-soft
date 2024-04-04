@@ -129,4 +129,75 @@ export const Icons = {
       />
     </svg>
   ),
+  XIcon: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={22}
+      fill="none"
+      {...props}
+    >
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" fillOpacity={0} d="M0 0h20v22H0z" />
+        </clipPath>
+      </defs>
+      <path fill="#FFF" d="M0 0h20v22H0z" />
+      <g clipPath="url(#a)">
+        <path
+          stroke="#E44286"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m6 7 8 8-8-8Zm8 0-8 8"
+        />
+      </g>
+    </svg>
+  ),
+  YesIcon: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      fill="none"
+      {...props}
+    >
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" fillOpacity={0} d="M0 0h20v20H0z" />
+        </clipPath>
+      </defs>
+      <path fill="#FFF" d="M0 0h20v20H0z" />
+      <g clipPath="url(#a)">
+        <path
+          stroke="#24C56E"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m6 10 3 3 5-6"
+        />
+      </g>
+    </svg>
+  ),
+  GiftIcon: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={12}
+      height={12}
+      fill="none"
+      {...props}
+    >
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" fillOpacity={0} d="M0 0h12v12H0z" />
+        </clipPath>
+      </defs>
+      <path fill="none" d="M0 0h12v12H0z" />
+      <g fill="#4295E4" clipPath="url(#a)">
+        <path d="M11 4.5H1c-.14 0-.25.11-.25.25v7c0 .13.11.25.25.25h10c.13 0 .25-.12.25-.25v-7c0-.14-.12-.25-.25-.25Zm-.25 7h-9.5V4.99h9.5v6.51Z" />
+        <path d="M11.5 2.5H.5c-.14 0-.25.11-.25.25v2c0 .13.11.25.25.25h11c.13 0 .25-.12.25-.25v-2c0-.14-.12-.25-.25-.25Zm-.25 2H.75V3h10.5v1.5Z" />
+        <path d="M6 2.5c-.14 0-.25.11-.25.25v9c0 .13.11.25.25.25.13 0 .25-.12.25-.25v-9c0-.14-.12-.25-.25-.25Z" />
+        <path d="M6.25 2.69C5.99 1.48 4.46.19 3.44.01 3.38 0 3.31 0 3.25 0c-.56 0-1 .44-1 1 0 .23.08.45.22.63 0 0 .01 0 .01.01.74.94 3.21 1.31 3.49 1.35h.04c.07 0 .13-.03.18-.08.05-.06.08-.14.06-.22ZM2.86 1.32c0-.01-.01-.01-.01-.02a.472.472 0 0 1-.1-.3c0-.28.22-.5.5-.5.03 0 .06 0 .1.01.75.12 1.88 1.03 2.29 1.91-.87-.16-2.34-.53-2.78-1.1Z" />
+        <path d="M8.75 0c-.07 0-.14 0-.19.01C7.53.19 6 1.48 5.74 2.69c-.02.08.01.16.06.22.05.05.11.08.18.08h.04c.28-.04 2.75-.41 3.49-1.35 0-.01.01-.01.01-.01.14-.18.23-.4.23-.63 0-.56-.45-1-1-1Zm.39 1.3c0 .01-.01.01-.01.02-.44.57-1.91.94-2.78 1.1C6.76 1.54 7.89.63 8.65.5h.1c.27 0 .5.22.5.5 0 .11-.04.21-.11.3Z" />
+      </g>
+    </svg>
+  ),
 };

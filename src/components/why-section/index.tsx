@@ -1,12 +1,10 @@
-import { WhyData } from "@/data";
+import { WhyData, title } from "@/data";
 
 const WhySection = () => {
   return (
     <section className="pt-[97px] pb-[100px]">
       <div className="container">
-        <h1 className="text-[44px] font-semibold leading-[62px] text-center">
-          Почему GoldenService?
-        </h1>
+        <h1 className={`${title} text-center`}>Почему GoldenService?</h1>
         <div className="flex items-center justify-center gap-[78px] mt-14">
           {WhyData.map((el) => (
             <div key={el.id} className="flex flex-col items-center">

@@ -17,6 +17,10 @@ function App() {
       element: <Catalog />,
     },
     {
+      path: "/catalog/:category",
+      element: <Catalog />,
+    },
+    {
       path: "/products",
       element: <Products />,
     },

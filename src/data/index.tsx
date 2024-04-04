@@ -85,3 +85,5 @@ export const WhyData: IWhyData[] = [
     text: "Возврат удвоенной стоимости каждого замка в случае брака. ",
   },
 ];
+
+export const title = "text-[44px] font-semibold leading-[62px]";

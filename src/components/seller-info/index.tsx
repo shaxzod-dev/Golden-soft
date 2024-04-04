@@ -8,8 +8,12 @@ const SellerInfo = () => {
           {SellerData.map(({ id, quantity, desc }) => {
             return (
               <div key={id} className="flex flex-col items-center gap-4">
-                <h3 className="text-[32px] font-semibold leading-[38px]">{quantity}</h3>
-                <p className="text-base font-semibold leading-[26px] text-primary">{desc}</p>
+                <h3 className="text-[32px] font-semibold leading-[38px]">
+                  {quantity}
+                </h3>
+                <p className="text-base font-semibold leading-[26px] text-primary">
+                  {desc}
+                </p>
               </div>
             );
           })}

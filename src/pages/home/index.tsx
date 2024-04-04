@@ -1,4 +1,4 @@
-import { Banner, Header, SellerInfo, WhySection } from "../../components";
+import { Banner, Category, Header, SellerInfo, WhySection } from "../../components";
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       <Banner />
       <SellerInfo />
       <WhySection />
+      <Category />
     </>
   );
 };
