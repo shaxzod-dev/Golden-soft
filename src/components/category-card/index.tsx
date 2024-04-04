@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const CategoryCard = ({ el }: any) => {
   return (
     <Link
-      key={el.id}
       to={`/catalog/${el.category}`}
       className="p-2 max-w-[288px] hover:scale-110 transition-all duration-150 hover:shadow-2xl hover:cursor-pointer"
     >

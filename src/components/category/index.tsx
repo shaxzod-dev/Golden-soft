@@ -22,7 +22,7 @@ const Category = () => {
         <h1 className={`${title} text-center`}>Категории</h1>
         <div className="grid grid-cols-4 gap-[30px] mt-16">
           {data.map((el) => (
-            <CategoryCard el={el} />
+            <CategoryCard key={el.id} el={el} />
           ))}
         </div>
         <Link
