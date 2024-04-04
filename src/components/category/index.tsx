@@ -26,7 +26,7 @@ const Category = () => {
           ))}
         </div>
         <Link
-          to={"/catalog"}
+          to={"/products"}
           className="bg-blue-500 text-white mt-[50px] block text-center mx-auto w-max text-base font-medium leading-[26px] py-3 px-[60px]"
         >
           Смотреть все
