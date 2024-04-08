@@ -20,3 +20,9 @@ export interface IGoldenData {
   stock: boolean;
   title: string;
 }
+
+export interface ICategoryData extends Pick<IGoldenData, "id"> {
+  category: string;
+  image: string;
+  title: string;
+}

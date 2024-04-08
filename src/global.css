@@ -1,10 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 .container {
-  max-width: 1300px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
+  @apply mx-auto px-5 w-full max-w-[1300px];
 }
