@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Icons } from "../../assets/icons";
 import HeaderTop from "./header-top";
 import { DownOutlined } from "@ant-design/icons";
-import { Badge, Dropdown } from "antd";
+import {  Dropdown } from "antd";
 import { DropdownItems } from "@/data";
 import { useState } from "react";
 import { CartModal, LikeModal } from "..";
