@@ -1,6 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import { About, Catalog, Home, Info, Products } from "./pages";
+import {
+  About,
+  CatalogCategory,
+  CatalogPage,
+  Home,
+  Info,
+  Products,
+} from "./pages";
 
 function App() {
   const routes = createBrowserRouter([
@@ -9,16 +16,16 @@ function App() {
       element: <Home />,
     },
     {
-      path: "/info",
+      path: "/info/:id",
       element: <Info />,
     },
     {
       path: "/catalog",
-      element: <Catalog />,
+      element: <CatalogPage />,
     },
     {
       path: "/catalog/:category",
-      element: <Catalog />,
+      element: <CatalogCategory />,
     },
     {
       path: "/products",

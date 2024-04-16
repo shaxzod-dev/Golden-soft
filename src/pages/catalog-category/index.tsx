@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Header } from "@/components";
-import BreadcrumbAntd from "@/components/antd";
+import { BreadcrumbAntd, CatalogCard, Header } from "@/components";
 import { IGoldenData } from "@/types";
-import { Icons } from "@/assets/icons";
-import { Flex, Rate } from "antd";
-import CatalogCard from "@/components/catalog-card";
-const Catalog = () => {
-  const { category } = useParams();
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+const CatalogCategory = () => {
+  const { category } = useParams<string>();
 
   const [data, setData] = useState<IGoldenData[]>([]);
   async function getData() {
@@ -26,14 +24,20 @@ const Catalog = () => {
   return (
     <>
       <Header />
-      <BreadcrumbAntd linker={category} title={category?.toUpperCase()} />
+      <BreadcrumbAntd
+        page={"catalog"}
+        linker={category}
+        title={category?.toUpperCase()}
+      />
       <div className="container">
         <div className="flex flex-wrap gap-[30px]">
           {fakeArray.map(() => (
             <>
-              {data.map((el) => (
-                <CatalogCard el={el} />
-              ))}
+              {data.length
+                ? data.map((el) => <CatalogCard key={el.id} el={el} />)
+                : fakeArray.map((i) => (
+                    <Skeleton width={288} height={342} key={i} />
+                  ))}
             </>
           ))}
         </div>
@@ -42,4 +46,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default CatalogCategory;

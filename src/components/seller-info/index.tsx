@@ -2,9 +2,9 @@ import { SellerData } from "@/data";
 
 const SellerInfo = () => {
   return (
-    <section>
+    <section className="bg-[rgb(242,248,255)]">
       <div className="container">
-        <div className="flex items-center justify-center py-10 gap-[82px] bg-[rgb(242,248,255)]">
+        <div className="flex items-center justify-center py-10 gap-[82px]">
           {SellerData.map(({ id, quantity, desc }) => {
             return (
               <div key={id} className="flex flex-col items-center gap-4">

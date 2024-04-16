@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CategoryCard } from "..";
 import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-const Category = ({ btn }: { btn: boolean }) => {
+const Category = () => {
   const [categories, setCategories] = useState<ICategoryData[]>([]);
 
   async function getCategory() {
@@ -23,25 +24,18 @@ const Category = ({ btn }: { btn: boolean }) => {
       <div className="container">
         <h1 className={`${title} text-center`}>Категории</h1>
         <div className="grid grid-cols-4 gap-10 mt-16">
-          {categories ? (
-            categories.map((el) => <CategoryCard key={el.id} el={el} />)
-          ) : (
-            <div className="bg-red-500">
-              <h1>hiiii</h1>
-              <Skeleton  className="bg-red-500 w-[300px] h-[200px]" />
-            </div>
-          )}
+          {categories.length
+            ? categories.map((el) => <CategoryCard key={el.id} el={el} />)
+            : Array.from({ length: 4 }).map((el: any) => (
+                <Skeleton width={288} height={342} key={el} />
+              ))}
         </div>
-        {btn ? (
-          <Link
-            to={"/products"}
-            className="bg-blue-500 text-white mt-[50px] block text-center mx-auto w-max text-base font-medium leading-[26px] py-3 px-[60px]"
-          >
-            Смотреть все
-          </Link>
-        ) : (
-          ""
-        )}
+        <Link
+          to={"/products"}
+          className="bg-blue-500 text-white mt-[50px] block text-center mx-auto w-max text-base font-medium leading-[26px] py-3 px-[60px]"
+        >
+          Смотреть все
+        </Link>
       </div>
     </section>
   );

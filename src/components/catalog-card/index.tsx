@@ -1,15 +1,22 @@
 import { useState } from "react";
 import { Icons } from "@/assets/icons";
 import { Flex, Rate } from "antd";
+import { Link } from "react-router-dom";
 
 const CatalogCard = ({ el }: { el: any }) => {
   const [value, setValue] = useState(3);
   return (
     <div
       key={el.id}
-      className="mt-10 relative border-[rgb(196,205,213)] max-w-[288px] w-full"
+      className="group hover:scale-110 transition-all duration-200 hover:cursor-pointer hover:shadow-2xl mt-10 relative border-[rgb(196,205,213)] max-w-[288px] w-full"
     >
       <img className="w-full h-[320px]" src={el.image} alt={el.title} />
+      <Link
+        to={`/info/${el.id}`}
+        className="text-base absolute top-[150px] leading-[26px] font-medium text-blue-500 py-3 px-12 border-[1px] border-blue-500 bg-opacity-90 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 left-[10%] rounded-lg"
+      >
+        Посмотреть товар
+      </Link>
       <div className="absolute top-3 right-3 left-3 flex flex-col">
         <div className="flex justify-between items-center">
           {el.stock ? (

@@ -12,7 +12,7 @@ export interface IWhyData extends Pick<ISellerInfo, "id"> {
 }
 
 export interface IGoldenData {
-  id: string;
+  id: number;
   category: string;
   price: number;
   old_price: number;
@@ -25,4 +25,12 @@ export interface ICategoryData extends Pick<IGoldenData, "id"> {
   category: string;
   image: string;
   title: string;
+}
+
+export interface ICatalogData extends Pick<ISellerInfo, "id"> {
+  title: string;
+  desc: string;
+  img: string;
+  reverse: boolean;
+  text: string;
 }

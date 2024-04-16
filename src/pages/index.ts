@@ -1,5 +1,6 @@
-export { default as Home } from "./home";
-export { default as Catalog } from "./catalog";
-export { default as Info } from "./info";
-export { default as Products } from "./products";
-export { default as About } from "./about";
+export { default as Home } from "@/pages/home";
+export { default as CatalogCategory } from "@/pages/catalog-category";
+export { default as Info } from "@/pages/info";
+export { default as Products } from "@/pages/products";
+export { default as About } from "@/pages/about";
+export { default as CatalogPage } from "@/pages/catalog-page";

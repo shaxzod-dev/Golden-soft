@@ -1,7 +1,15 @@
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 
-const BreadcrumbAntd = ({ linker, title }: any) => (
+const BreadcrumbAntd = ({
+  linker,
+  page,
+  title,
+}: {
+  title: any;
+  linker: any;
+  page: string;
+}) => (
   <div className="container">
     <Breadcrumb
       items={[
@@ -9,7 +17,7 @@ const BreadcrumbAntd = ({ linker, title }: any) => (
           title: <Link to={"/"}>HOME</Link>,
         },
         {
-          title: <Link to={`/catalog/${linker}`}>{title}</Link>,
+          title: <Link to={`/${page}/${linker}`}>{title}</Link>,
         },
       ]}
     />
